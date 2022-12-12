@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Jugar">
+
+    <TextView
+        android:id="@+id/pregunta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="127dp"
+        android:gravity="center"
+        android:text="[pregunta]"
+        app:layout_constraintBottom_toTopOf="@+id/respuestaUsuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/respuestaUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="58dp"
+        android:ems="10"
+        android:inputType="textShortMessage"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/validar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pregunta" />
+
+    <Button
+        android:id="@+id/validar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="37dp"
+        android:text="Validar"
+        app:layout_constraintBottom_toTopOf="@+id/pasapalabra"
+        app:layout_constraintEnd_toEndOf="@+id/pasapalabra"
+        app:layout_constraintTop_toBottomOf="@+id/respuestaUsuario" />
+
+    <Button
+        android:id="@+id/pasapalabra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="Pasapalabra"
+        app:layout_constraintBottom_toTopOf="@+id/rendirse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/validar" />
+
+    <Button
+        android:id="@+id/rendirse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="142dp"
+        android:text="Rendirse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pasapalabra"
+        app:layout_constraintTop_toBottomOf="@+id/pasapalabra" />
+</androidx.constraintlayout.widget.ConstraintLayout>
